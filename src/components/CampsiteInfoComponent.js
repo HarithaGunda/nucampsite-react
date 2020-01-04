@@ -1,7 +1,7 @@
 import React,{Component} from 'react';
 import { Card, CardImg, CardText, CardBody, CardTitle } from 'reactstrap';
 
-class CampsiteInfo extends Component{
+export class CampsiteInfo extends Component{
     renderCampsite(campsite){
         return (
             <div className="col-md-5 m-1">
@@ -43,4 +43,3 @@ class CampsiteInfo extends Component{
         return <div/>;
     }
 }
-export default CampsiteInfo;
