@@ -18,7 +18,6 @@ class Header extends Component {
     }
     render() {
         return (
-
             <React.Fragment>
                 <Jumbotron fluid>
                     <div className="container">
