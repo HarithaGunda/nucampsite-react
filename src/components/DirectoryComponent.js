@@ -3,7 +3,7 @@ import {Card, CardImg, CardImgOverlay, CardTitle,Breadcrumb, BreadcrumbItem} fro
 import {Link} from 'react-router-dom';
 import { Loading } from './LoadingComponent';
 import { baseUrl } from '../shared/baseUrl';
-
+import Rotate from 'react-reveal/Rotate';
 
 function RenderDirectoryItem({campsite}) {
     return (
@@ -21,9 +21,11 @@ function Directory(props) {
     
     const directory=props.campsites.campsites.map(campsite => {
         return (
-            <div key={campsite.id} className="col-md-5 m-1">
+            <Rotate top left>
+            <div className="col-md-5 m-1">
                 <RenderDirectoryItem campsite={campsite} />
             </div>
+            </Rotate>
         );
     }) 
     
