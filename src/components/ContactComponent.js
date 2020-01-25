@@ -31,10 +31,10 @@ class Contact extends Component {
     }
     
     handleSubmit(values){
-        console.log('Current state is:'+JSON.stringify(values));
-        alert('Current state is:'+JSON.stringify(values));
+        //console.log('Current state is:'+JSON.stringify(values));
+        //alert('Current state is:'+JSON.stringify(values));
+        this.props.postFeedback((this.props.feedbacks.feedbacks.length),values.firstName,values.lastName,values.phoneNum,values.email,values.agree,values.contactType,values.feedbacktext);
         this.props.resetFeedbackForm();
-
     }
     render(){
     return (
@@ -185,9 +185,9 @@ class Contact extends Component {
                                     </Col>
                                 </Row>
                                 <Row className="form-group">
-                                    <Label htmlFor="feedback" md={2}>Your Feedback</Label>
+                                    <Label htmlFor="feedbacktext" md={2}>Your Feedback</Label>
                                     <Col md={10}>
-                                    <Control.textarea model=".feedback" id="feedback" name="feedback"
+                                    <Control.textarea model=".feedbacktext" id="feedbacktext" name="feedbacktext"
                                             rows="12" className="form-control"
                                     />
                                     </Col>
